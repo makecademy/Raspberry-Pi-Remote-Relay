@@ -1,12 +1,13 @@
 <?php
 
 	$state = $_GET["state"];
+	exec("gpio -g mode 4 out");
 	  
 	if ($state == "on"){
-		exec("sudo python on.py");
+		exec("gpio -g write 4 1");
 	}
 	if ($state == "off"){
-		exec("sudo python off.py");
+		exec("gpio -g write 4 0");
 	}
 	
 ?>
