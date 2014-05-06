@@ -1,4 +1,4 @@
-import RPi.GPIO as GPIO
-GPIO.setmode(GPIO.BCM) 
-GPIO.setup(4, GPIO.OUT)
-GPIO.output(4, 0)
+import wiringpi  
+io = wiringpi.GPIO(wiringpi.GPIO.WPI_MODE_SYS)  
+io.pinMode(4,io.OUTPUT)
+io.digitalWrite(4,io.LOW)
