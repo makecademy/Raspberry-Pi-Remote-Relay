@@ -15,14 +15,14 @@
 
 <?php
 
-	exec("gpio -g mode 4 out");
+	exec("sudo gpio -g mode 4 out");
 	$state = $_GET["total"];
 	  
 	if ($state == "on"){
-		exec("gpio -g write 4 1");
+		exec("sudo gpio -g write 4 1");
 	}
 	if ($state == "off"){
-		exec("gpio -g write 4 0");
+		exec("sudo gpio -g write 4 0");
 	}
 	
 ?>
